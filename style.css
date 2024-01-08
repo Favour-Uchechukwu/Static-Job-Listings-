@@ -32,6 +32,64 @@ body {
   font-family: "League Spartan", sans-serif;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+.filtered{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 3%;
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: var(--light-grayish-cyan-filtered);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 6px 8px var(--dark-grayish-cyan);
+  padding: 1.3em;
+}
+.filter{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 2;
+}
+.filter li {
+  font-weight: 600;
+  background-color: var(--light-grayish-cyan);
+  color: var(--desaturated-dark-cyan);
+  gap: 5px;
+  padding-left: 0.4rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter li span {
+  background-color: var(--desaturated-dark-cyan);
+  padding: 0.5rem;
+  border-radius: 0px 6px 6px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.filter li span img {
+  height: 14px;
+  width: 14px;
+}
+.filter li span:hover{
+  background-color: red;
+  color: white;
+}
+.filtered .clear {
+  cursor: pointer;
+  color: var(--dark-grayish-cyan);
+}
+.filtered .clear:hover{
+  text-decoration: underline;
 }
 .main-container {
   width: 95%;
@@ -103,6 +161,10 @@ body {
   color: var(--desaturated-dark-cyan);
   padding: 0.5rem;
   border-radius: 6px;
+  cursor: pointer;
+}
+.right li:hover{
+  background-color: var(--light-grayish-cyan-filtered);
 }
 
 .hidden {
@@ -116,6 +178,9 @@ body {
 @media (max-width: 640px) {
   body {
     background-image: url("./images/bg-header-mobile.svg");
+  }
+  .filtered{
+    top: 5svh;
   }
   .main-container {
     gap: 2em;
